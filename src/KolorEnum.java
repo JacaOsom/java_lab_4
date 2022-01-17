@@ -1,0 +1,3 @@
+public enum KolorEnum {
+    SZARY, ZIELONY, POMARAŃCZOWY, BRĄZOWY, NIEBIESKI, BIAŁY;
+}

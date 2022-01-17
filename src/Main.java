@@ -1,5 +1,28 @@
+import javax.sound.midi.Soundbank;
+
 public class Main {
     public static void main(String[] args) {
+
+        Budynek dom1 = new Dom();
+        dom1.powierzchnia(180);
+        dom1.adresBudynku("Warszawa, ul. Akacjowa 22");
+        dom1.kolorDomu(KolorEnum.BIAŁY);
+        dom1.liczbaMieszkancow(5);
+        dom1.liczbaOkien(16);
+        dom1.cenaCalkowita(180, 5870);
+
+        System.out.println(dom1.toString());
+
+        Dom dom2 = new Dom();
+        dom2.powierzchnia(121.40);
+        dom2.adresBudynku("Gdańsk, ul. Przykładowa 8");
+        dom2.kolorDomu(KolorEnum.BRĄZOWY);
+        dom2.liczbaMieszkancow(3);
+        dom2.liczbaOkien(10);
+        dom2.cenaCalkowita(dom2.getPow(), 5050);
+
+        System.out.println();
+        System.out.println(dom2.toString());
 
         /* zad.1
         a) Stwożyć interfejs Budynek,
