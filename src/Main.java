@@ -1,6 +1,48 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
+        Student student1 = new Student("Grzegorz", "Nowak", 54520);
+        System.out.println(student1.toString());
+        student1.wykonajMetody();
+
+        System.out.println("");
+        Student student2 = new Student("Karolina", "Lewandowska", 65652);
+        System.out.println(student2.toString());
+        student2.wykonajMetody();
+
+        System.out.println("");
+        Pracownik pracownik1 = new Pracownik("Antoni", "Kowalski", 7450, 22);
+        System.out.println(pracownik1.toString());
+        pracownik1.wykonajDzialania();
+
+        System.out.println("");
+        Pracownik pracownik2 = new Pracownik("Bartosz", "Kanapka", 3600, 22);
+        System.out.println(pracownik2.toString());
+        pracownik2.wykonajDzialania();
+
+        System.out.println("");
+        Kierownik kierownik1 = new Kierownik("Kamil", "Węgiel", 12300, 22);
+        System.out.println(kierownik1.toString());
+        kierownik1.wykonajDzialaniaKierownika();
+
+        System.out.println("");
+        Kierownik kierownik2 = new Kierownik("Magda", "Wójcik", 14100, 22);
+        System.out.println(kierownik2.toString());
+        kierownik2.wykonajDzialaniaKierownika();
+
+        System.out.println("\nLISTA:");
+        List<PracownikI> listaPracownikow = new ArrayList<>();
+        listaPracownikow.add(pracownik1);
+        listaPracownikow.add(pracownik2);
+        listaPracownikow.add(kierownik1);
+        listaPracownikow.add(kierownik2);
+
+        for (PracownikI item: listaPracownikow) {
+            System.out.println("\n" + item.toString());
+        }
 
         /* zad.1
         a) napisać interfejs CzlowiekI
